@@ -1,0 +1,51 @@
+<!--
+/**
+ * DPD Carrier v0.0.1 shipping module for OpenCart 1.5
+ *
+ * @category   DPDCarrier
+ * @package    DPDCarrier
+ * @author     Michiel Van Gucht (michiel.vangucht@dpd.be)
+ * @copyright  Michiel Van Gucht
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+
+<modification>
+	<id>DPD Carrier</id>
+	<version>1.5.x</version>
+	<vqmver>2.5.1</vqmver>
+	<author>Michiel Van Gucht</author>
+	<file name="/catalog/controller/checkout/checkout.php">
+		<operation error="abort">
+			<search position="before"><![CDATA[$this->response->setOutput($this->render());]]></search>
+			<add><![CDATA[$this->document->addScript('https://maps.googleapis.com/maps/api/js?libraries=places');
+				$this->document->addScript('catalog/view/javascript/DPD/parcelshoplocator.js');
+				$this->document->addScript('catalog/view/javascript/DPD/pickup.js');
+				$this->document->addStyle('catalog/view/theme/default/stylesheet/DPD/parcelshoplocator.css');
+				]]>
+			</add>
+		</operation>
+	</file>
+	<file name="/catalog/controller/checkout/confirm.php">
+		<operation error="log">
+			<search position="replace" offset="7"><![CDATA[
+				if (isset($this->session->data['payment_method']['code'])) {
+				]]></search>
+			<add><![CDATA[			
+				if (isset($this->session->data['payment_method']['code'])) {
+					$data['payment_code'] = $this->session->data['payment_method']['code'];
+				} else {
+					$data['payment_code'] = '';
+				}
+
+				if ($this->cart->hasShipping()) {
+					if ($this->customer->isLogged()
+						&& !(
+								isset($this->session->data['shipping_method']['code'])
+								&& $this->session->data['shipping_method']['code'] == 'dpd_carrier.pickup'
+						)
+					) {
+			]]></add>
+		</operation>
+	</file>
+</modification>

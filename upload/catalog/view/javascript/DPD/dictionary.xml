@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- If a language isn't found linked to a country (eg: nl_BE), the locator will fall back to its core language (eg: nl) -->
+<dictionary>
+	<entry id="1">
+		<en>Search</en>
+		<nl>Zoeken</nl>
+		<nl_NL>Zoeken</nl_NL>
+		<nl_BE>Zoeken</nl_BE>
+		<fr>Recherche</fr>
+		<de>Suchen</de>
+	</entry>
+	<entry id="2">
+		<en>Opening Times</en>
+		<nl>Openingsuren</nl>
+		<nl_NL>Openingstijden</nl_NL>
+		<nl_BE>Openingsuren</nl_BE>
+		<fr>Heures d'Ouverture</fr>
+		<de>Öffnungszeiten</de>
+	</entry>
+	<entry id="3">
+		<en>Monday</en>
+		<nl>Maandag</nl>
+		<nl_NL>Maandag</nl_NL>
+		<nl_BE>Maandag</nl_BE>
+		<fr>Lundi</fr>
+		<de>Montag</de>
+	</entry>
+	<entry id="4">
+		<en>Tuesday</en>
+		<nl>Dinsdag</nl>
+		<nl_NL>Dinsdag</nl_NL>
+		<nl_BE>Dinsdag</nl_BE>
+		<fr>Mardi</fr>
+		<de>Dienstag</de>
+	</entry>
+	<entry id="5">
+		<en>Wednesday</en>
+		<nl>Woensdag</nl>
+		<nl_NL>Woensdag</nl_NL>
+		<nl_BE>Woensdag</nl_BE>
+		<fr>Mercredi</fr>
+		<de>Mittwoch</de>
+	</entry>
+	<entry id="6">
+		<en>Thursday</en>
+		<nl>Donderdag</nl>
+		<nl_NL>Donderdag</nl_NL>
+		<nl_BE>Donderdag</nl_BE>
+		<fr>Jeudi</fr>
+		<de>Donnerstag</de>
+	</entry>
+	<entry id="7">
+		<en>Friday</en>
+		<nl>Vrijdag</nl>
+		<nl_NL>Vrijdag</nl_NL>
+		<nl_BE>Vrijdag</nl_BE>
+		<fr>Vendredi</fr>
+		<de>Freitag</de>
+	</entry>
+	<entry id="8">
+		<en>Saturday</en>
+		<nl>Zaterdag</nl>
+		<nl_NL>Zaterdag</nl_NL>
+		<nl_BE>Zaterdag</nl_BE>
+		<fr>Samedi</fr>
+		<de>Samtag</de>
+	</entry>
+	<entry id="9">
+		<en>Sunday</en>
+		<nl>Zondag</nl>
+		<nl_NL>Zondag</nl_NL>
+		<nl_BE>Zondag</nl_BE>
+		<fr>Dimanche</fr>
+		<de>Sonntag</de>
+	</entry>
+	<entry id="10">
+		<en>Deliver my parcel here</en>
+		<nl>Lever mijn pakket hier</nl>
+		<nl_NL>Bezorg mijn pakket hier</nl_NL>
+		<nl_BE>Lever mijn pakket hier</nl_BE>
+		<fr>Livrer mon colis ici</fr>
+		<de>Mein Paket hier zustellen</de>
+	</entry>
+	<entry id="11">
+		<en>Close</en>
+		<nl>Sluit</nl>
+		<nl_NL>Sluit</nl_NL>
+		<nl_BE>Sluit</nl_BE>
+		<fr>Fermé</fr>
+		<de>Schließen</de>
+	</entry>
+	<entry id="12">
+		<en>The Pickup parcelshops in this country are shown as inactive &#60;br&#62; because of your country selection.</en>
+		<nl_NL>De Pickup parcelshops in deze regio zijn niet te selecteren &#60;br&#62; vanwege uw landselectie</nl_NL>
+		<nl_BE>De Pickup parcelshops in dit gebied zijn niet selecteerbaar &#60;br&#62; vanwege uw landselectie.</nl_BE>
+		<fr>Les Pickup parcelshops dans ce pays sont présentés comme inactif &#60;br&#62; en raison de votre sélection de pays.</fr>
+		<de>Die Pickup paketshops in diesem Land werden als inaktiv &#60;br&#62; angezeigt auf Grund ihrer Landesauswahl.</de>
+	</entry>
+</dictionary>
