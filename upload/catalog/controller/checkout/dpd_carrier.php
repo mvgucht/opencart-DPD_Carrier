@@ -35,13 +35,12 @@ class ControllerCheckoutDpdCarrier extends Controller {
 			if($delivery_address['iso_code_2'] == $parcelshop->isoAlpha2)
 			{
 				$this->session->data['guest']['shipping'] = array(
-					'firstname'      => $delivery_address['firstname']
-					,'lastname'      => $delivery_address['lastname']
+					'firstname'      => 'Pickup by DPD'
+					,'lastname'      => $delivery_address['firstname'] . ' ' . $delivery_address['lastname']
 					,'company'       => $parcelshop->company
-					,'company_id'    => $parcelshop->parcelShopId
 					,'tax_id'        => isset($delivery_address['tax_id']) ? $delivery_address['tax_id'] : '' // TODO: see if there is a store tax id.
 					,'address_1'     => $parcelshop->street . ' ' . $parcelshop->houseNo
-					,'address_2'     => ''
+					,'address_2'     => $parcelshop->parcelShopId
 					,'postcode'      => $parcelshop->zipCode
 					,'city'          => $parcelshop->city
 					,'zone_id'       => $delivery_address['zone_id']
@@ -143,6 +142,7 @@ class ControllerCheckoutDpdCarrier extends Controller {
 	
 	private function getDeliveryAddress() {
 		if(isset($this->session->data['shipping_address_id'])) {
+			$this->load->model('account/address');
 			$delivery_address_id = $this->session->data['shipping_address_id'];
 			return $this->model_account_address->getAddress($delivery_address_id);
 		} else {
