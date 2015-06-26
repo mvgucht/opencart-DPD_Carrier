@@ -70,8 +70,9 @@ function showLocator(target) {
 	if($("#dpdLocatorContainer").length > 0){
 		dpdLocator.showLocator();
 	} else {
-		$(target).parents( "div" ).first().prepend("<div id='dpdLocatorContainer'><div id='chosenShop'></div></div>");
-		
+		//$(target).parents( "tr" ).first().prepend("<div id='dpdLocatorContainer'><div id='chosenShop'></div></div>");
+		$(target).parents("tr").after("<tr><td colspan=\"3\"><div id='dpdLocatorContainer'><div id='chosenShop'></div></div></td></tr>");
+
 		dpdLocator = new DPD.locator({
 			imgpath: 'catalog/view/theme/default/image/DPD'
 			,ajaxpath: 'index.php?route=checkout/dpd_carrier'
