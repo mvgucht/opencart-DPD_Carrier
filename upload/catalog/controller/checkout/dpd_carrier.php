@@ -1,9 +1,15 @@
 <?php 
 class ControllerCheckoutDpdCarrier extends Controller { 
 	public function index() {
-		if(!(isset($_SERVER['HTTP_REFERER'])
-			&& parse_url($_SERVER['HTTP_REFERER'])['host'] == parse_url($this->config->get('config_url'))['host']))
-		{
+		if(isset($_SERVER['HTTP_REFERER'])) {
+			$referer_url = parse_url($_SERVER['HTTP_REFERER']);
+			$config_url = parse_url($this->config->get('config_url'));
+			
+			if( $referer_url['host'] != $config_url['host']) {
+				$this->redirect($this->url->link('common/home'));
+				die;
+			}
+		} else {
 			$this->redirect($this->url->link('common/home'));
 			die;
 		}
