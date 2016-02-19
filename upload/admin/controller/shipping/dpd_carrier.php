@@ -26,7 +26,7 @@ class ControllerShippingDpdCarrier extends Controller {
 			$this->redirect($this->url->link('extension/shipping', 'token=' . $this->session->data['token'], 'SSL'));
 		}
 
-		$this->data['heading_title'] = $this->language->get('DPD Carrier');
+		$this->data['heading_title'] = $this->language->get(heading_title');
 
 		$this->data['entry_status'] = $this->language->get('Status:');
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
