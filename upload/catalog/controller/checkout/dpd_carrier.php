@@ -89,7 +89,7 @@ class ControllerCheckoutDpdCarrier extends Controller {
 		$this->delisID = $this->config->get('dpd_carrier_delis_id');
 		$this->delisPw = $this->config->get('dpd_carrier_delis_password');
 		
-		$this->url = $this->config->get('dpd_carrier_delis_server') == 1 ? 'https://public-ws.dpd.com/services/' : 'https://public-ws-stage.dpd.com/services/';
+		$this->url = $this->config->get('dpd_carrier_delis_server') == 1 ? 'https://public-dis.dpd.nl/Services/' : 'https://public-dis-stage.dpd.nl/Services/';
 		
 		$this->timeLogging = $this->config->get('dpd_carrier_time_logging') == 1;
 		

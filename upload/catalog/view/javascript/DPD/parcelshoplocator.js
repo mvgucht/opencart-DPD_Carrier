@@ -229,7 +229,7 @@ var DPD = new function(){
 						shopInfo	+=	'	</div>';
 						shopInfo	+=	'	<div class="centerText">';
 						if(shopActive){
-							shopInfo	+=	'		<input class="choiceButton" type="button" value="' + t(10) + '" onclick="javascript:' + objConfig.callback + '(' + shop.parcelShopId + ');">';
+							shopInfo	+=	'		<input class="choiceButton" type="button" value="' + t(10) + '" onclick="javascript:' + objConfig.callback + '(\'' + shop.parcelShopId + '\');">';
 						} else {
 							shopInfo 	+= 	'<p>' + t(12) + '</p>';
 						}
